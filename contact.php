@@ -16,13 +16,7 @@ session_start();
 <li><a href = "contact.php">contact</a></li>
 </ul>
     <?php
-    $_SESSION['username'] = "13";
-    echo $_SESSION['username'] ;
-    if(!isset($_SESSION["username"])){
-        echo "you are not logged in !";
-    }else {
-        echo "you are logged in !";
-    }
+    echo $_SESSION['username'] 
     ?>
 </body>
 </html>

@@ -11,6 +11,7 @@ session_start();
     <link rel = "stylesheet type = "text/css href = "style.css"> 
 </head>
 <body>
+<h2> I learnt how to use Session in php</h2>
 <ul>
 <li><a href = "index.php">Home</a></li>
 <li><a href = "contact.php">contact</a></li>

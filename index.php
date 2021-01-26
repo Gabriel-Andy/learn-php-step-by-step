@@ -20,8 +20,8 @@ session_start();
     echo $_SESSION['username'] ;
     if(!isset($_SESSION["username"])){
         echo "you are not logged in !";
-    }else {
-        echo "you are logged in !";
+    }elseif(!isset($_SESSION["lastname"])) {
+        echo "you are logged out!";
     }
     ?>
 </body>

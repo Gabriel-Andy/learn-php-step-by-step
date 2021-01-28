@@ -23,4 +23,25 @@ $pwd = mysqli_real_escape_string($conn,$_POST['pwd']);
    header("Location: ../index.php?signup=success");
    ?>
 
+<?php
+if(isset($_POST['submit'])) {
+include_once 'dbh.inc.php';
+$first = $_POST['first'];
+$last = $_POST['last$last'];
+$email = $_POST['email'];
+$uid = $_POST['uid'];
+$pwd = $_POST['pwd'];
+if(empty($first) || $last || $email || $uid || pwd) {
+    header ("Locaton: ../index.php?signup=empty");
+}
+else {
+if(filter_var(!email,FILTER_VALIDATE_EMAIL)){
+    header("Location: ../index.php?index=invalidemail");
+}else {
+    echo "sign up the user!";
+}
+}
+}else {
+    header("Location: ../index.php?signup = error");
+}
   

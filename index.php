@@ -1,33 +1,31 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error handler tutorials!</title>
-</head>
-<body>
-<h2>Sign up</h2>
-<form action = "includes/signup.inc.php" method = "POST">
-
-<input type = "text" name = "first" placeholder = "Firstname">
-<br>
-<input type = "text" name = "last" placeholder = "Lastname">
-<br>
-<input type = "text" name = "email" placeholder = "E-mail">
-<br>
-<input type = "text" name = "uid" placeholder = "Username">
-<br>
- <input type = "password" name = "pwd" placeholder = "Password">
-<br>
-<button type = "submit" name = "submit">Sign up </button>
-</form>
+<!--Splitting the header and footer into separate documents makes things easier!-->
 <?php
-$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-  if(strpos($fullUrl, "signup = empty") == true){
-      echo "<p></p>you did not fill in all fields</p>;
-  }
-  
-  ?>
-</body>
-</html>
+  include_once 'header.php';
+?>
+
+<section class="index-intro">
+  <h1>This Is An Introduction</h1>
+  <p>Here is an important paragraph that explains the purpose of the website and why you are here!</p>
+</section>
+
+<section class="index-categories">
+  <h2>Some Basic Categories</h2>
+  <div class="index-categories-list">
+    <div>
+      <h3>Fun Stuff</h3>
+    </div>
+    <div>
+      <h3>Serious Stuff</h3>
+    </div>
+    <div>
+      <h3>Exciting Stuff</h3>
+    </div>
+    <div>
+      <h3>Boring Stuff</h3>
+    </div>
+  </div>
+</section>
+
+<?php
+  include_once 'footer.php';
+?>

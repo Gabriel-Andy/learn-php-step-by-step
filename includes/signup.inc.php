@@ -17,12 +17,12 @@ if (isset($_POST["submit"])) {
 
   // Left inputs empty
   // We set the functions "!== false" since "=== true" has a risk of giving us the wrong outcome
-  if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
+  if (emptyInputsSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
     header("location: ../signup.php?error=emptyinput");
 		exit();
   }
 	// Proper username chosen
-  if (invalidUid($uid) !== false) {
+  if (invalidUid($username) !== false) {
     header("location: ../signup.php?error=invaliduid");
 		exit();
   }
@@ -37,7 +37,7 @@ if (isset($_POST["submit"])) {
 		exit();
   }
   // Is the username taken already
-  if (uidExists($conn, $username) !== false) {
+  if (uidExists($conn,$username,$email) !== false) {
     header("location: ../signup.php?error=usernametaken");
 		exit();
   }
